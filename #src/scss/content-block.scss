@@ -1,87 +1,3 @@
-.content-block {
-  margin-bottom: 35px;
-  background-color: $background-color__002;
-  border-radius: 28.5px;
-}
-
-.headline {
-  display: flex;
-  align-items: flex-start;
-  height: 615px;
-  &__col-one {
-    margin-right: 40px;
-    min-width: 475px;
-    height: 100%;
-    background-image: url(../img/Group135.png);
-    background-repeat: no-repeat;
-  }
-  &__col-two {
-    padding-top: 65px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-    height: 100%;
-    background-image: url(../img/background--002.png);
-    background-repeat: no-repeat;
-    background-position: 98% 80%;
-  }
-}
-
-.main-title {
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 35px;
-  letter-spacing: 0.6px;
-  color: $text-color__003;
-  &__accent {
-    margin: 0 6px;
-    padding: 12px 6px;
-    color: $text-color__002;
-    background-color: $background-color__003;
-    &--first {
-      padding-left: 12px;
-      margin-left: 0;
-    }
-  }
-}
-
-.about-cc {
-  padding: 40px 100px 0 70px;
-  flex-grow: 1;
-  font-size: 18px;
-  line-height: 32px;
-  color: $text-color__003;
-}
-
-.notice {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 50px;
-  &__elem {
-    margin-right: 10px;
-    padding: 0 30px 0 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    font-size: 16px;
-    line-height: 19px;
-    color: $text-color__004;
-    background-color: $background-color__001;
-    border-radius: 20.5px 20.5px 0px 0px;
-    &--top {
-      border-radius: 0px 0px 20.5px 20.5px;
-    }
-    img {
-      margin-right: 30px;
-    }
-  }
-}
-
 .trends {
   padding: 30px 45px 70px 45px;
   height: 690px;
@@ -264,7 +180,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 970px;
+  width: 95%;
   height: 135px;
   background-color: $background-color__001;
   border-radius: 0px 50px 0px 0px;
@@ -363,8 +279,8 @@
     background-repeat: no-repeat;
   }
   &--third {
-    margin: 80px 0 40px 0;
-    padding: 0 70px;
+    margin: 80px 0 0 0;
+    padding: 0 70px 40px 70px;
     align-items: center;
   }
 }
@@ -502,4 +418,10 @@
     line-height: 22px;
     color: $text-color__013;
   }
+}
+
+.steps {
+  width: 100%;
+  height: 635px;
+  background-image: url(../img/Group136.png);
 }

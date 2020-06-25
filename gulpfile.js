@@ -81,8 +81,9 @@ const css = () => {
     )
     .pipe(
       autoprefixer({
-        overrideBrowsersList: ['last 5 version'],
-        cascade: true
+        overrideBrowsersList: ['last 10 version'],
+        cascade: true,
+        grid: true
       })
     )
     .pipe(webCss())
