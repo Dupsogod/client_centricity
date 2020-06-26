@@ -1,0 +1,114 @@
+.principles__row {
+  display: flex;
+  justify-content: space-between;
+  &--second {
+    background-image: url(../img/background--011.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+}
+
+.principles-content {
+  margin-bottom: 95px;
+  padding: 45px 0 0 90px;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: $text-color__010;
+  p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.person-slide-nav {
+  margin-top: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  height: 135px;
+  background-color: $background-color__001;
+  border-radius: 0px 50px 0px 0px;
+}
+
+.slide-nav {
+  margin-top: -65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  &__arrow {
+    margin: 0 30px 0 45px;
+    width: 20px;
+    height: 31px;
+    background-image: url(../img/icon--arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    &--right {
+      margin: 0 45px 0 30px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.slide-person-block {
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  &__item {
+    padding: 12px;
+    text-align: center;
+    width: 110px;
+    height: 180px;
+    background: $background-color__002;
+    box-shadow: 0px 16px 47px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    cursor: pointer;
+    img {
+      margin-bottom: 5px;
+    }
+    span {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.9799px;
+      color: $text-color__011;
+    }
+  }
+}
+
+.person-block {
+  padding-left: 70px;
+  position: relative;
+  width: 480px;
+}
+
+.person-block-text {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 457px;
+  font-family: $second-font;
+  color: $text-color__002;
+  background-color: $background-color__003;
+  &__name {
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  &__position {
+    font-size: 18px;
+    line-height: 23px;
+    text-align: right;
+  }
+}

@@ -2,3 +2,4 @@
 @@include('owl.carousel.js')
 @@include('webp.js')
 @@include('carousel.js') 
+@@include('tabs.js') 
