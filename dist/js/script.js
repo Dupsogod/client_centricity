@@ -3493,3 +3493,13 @@ $('.buttonSwitch').on('click', function () {
 		$('#' + local_id).addClass('active');
 	}
 }); 
+$('.btn').on('click', function () {
+  var local_data = $(this).attr('data-tab');
+  if (!$('[data-item=' + local_data + ']').hasClass('active')) {
+		$('[data-item=' + local_data + ']').siblings().removeClass('active');
+		$('[data-item=' + local_data + ']').addClass('active');
+	}
+}) 
+$('.burger').click(function () {
+	$('.burger, .header').toggleClass('active');
+}) 

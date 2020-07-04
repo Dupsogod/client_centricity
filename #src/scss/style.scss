@@ -29,6 +29,8 @@ $text-color__010: #4D4D4D;
 $text-color__011: #454341;
 $text-color__012: rgba(0, 0, 0, 0.7);
 $text-color__013: #3D5154;
+$text-color__014: #979797;
+$text-color__015: #11223F;
 $background-color__001: #F2F2F2;
 $background-color__002: #FFFFFF;
 $background-color__003: #F70263;
@@ -36,6 +38,7 @@ $background-color__004: #F5F7FA;
 $background-color__005: #EEEEEE;
 $background-color__006: rgba(0, 0, 0, 0.6);
 $background-color__007: #D41367;
+$background-color__008: rgb(34, 35, 47);
 
 body {
   margin: 0;
@@ -44,11 +47,18 @@ body {
 }
 
 .wrapper {
+  position: relative;
   padding: 0 50px;
   width: 100%;
   font-family: $main-font;
   box-sizing: border-box;
   background-color: $background-color__001;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 375px) {
+    padding: 0 5px;
+  }
   * {
     box-sizing: border-box;
   }
@@ -64,6 +74,7 @@ body {
   p {
     margin: 0;
   }
+
 }
 
 .content-block {
@@ -83,11 +94,72 @@ body {
   color: $text-color__003;
   &--principles {
     padding: 45px 0 0 60px;
+    @media (max-width: 1280px) {
+      padding: 30px 0 0 0;
+      text-align: center;
+      order: 1;
+    }
+  }
+  &--targets {
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
+  &--trends {
+    padding: 30px 0 0 0;
+    text-align: center;
   }
 }
 
 @import "main-menu";
-@import "content-block";
 @import "headline";
 @import "trends";
 @import "principles";
+@import "targets";
+@import "steps";
+
+.notice {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  &--principles {
+    @media (max-width: 1280px) {
+      padding: 0 30px;
+      justify-content: center;
+    }
+  }
+  &__elem {
+    margin-right: 10px;
+    padding: 0 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text-color__004;
+    background-color: $background-color__001;
+    border-radius: 20.5px 20.5px 0px 0px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    &:hover {
+      color: $text-color__002;
+      background-color: $background-color__003;
+    }
+    @media (max-width: 1440px) {
+      padding: 0 2%;
+      font-size: 12px;
+      img {
+        margin-right: 10px;
+      }
+    }
+    &--top {
+      border-radius: 0px 0px 20.5px 20.5px;
+      @media (max-width: 768px) {
+        padding: 0 10px;
+      }
+    }
+    img {
+      margin-right: 25px;
+    }
+  }
+}

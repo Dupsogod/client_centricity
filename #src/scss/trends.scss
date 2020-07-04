@@ -1,24 +1,36 @@
 .trends {
   padding: 30px 45px 70px 45px;
-  height: 690px;
+  height: auto;
   display: flex;
-  align-items: flex-start;
+  align-content: center;
   &__col-one {
     margin-right: 20px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
   }
   &__col-two {
     flex-grow: 1;
+    padding-left: 10%;
+    @media (max-width: 1440px) {
+      padding: 0 10px;
+    }
+  }
+  @media (max-width: 1366px) {
+    flex-direction: column;
+    padding: 30px 20px 30px 20px;
+  }
+  @media (max-width: 375px) {
+    padding: 15px 5px 15px 5px;
   }
 }
 
 .trends-nav {
+  position: relative;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-grow: 1;
   &__item {
     display: flex;
     align-items: center;
@@ -27,6 +39,19 @@
     letter-spacing: -0.5px;
     color: $text-color__005;
     cursor: pointer;
+    @media (max-width: 1366px) {
+      margin-left: 25px;
+      width: 50%;
+      justify-content: flex-start;
+      &:first-child {
+        padding-right: 25px;
+        justify-content: flex-end;
+      }
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
     &::before {
       content: '';
       margin-right: 20px;
@@ -34,6 +59,9 @@
       height: 25px;
       background-repeat: no-repeat;
       background-position: center center;
+      @media (max-width: 645px) {
+        display: none;
+      }
     }
     &.active:first-child::before {
       background-image: url(../img/icon--compass_active.svg);
@@ -53,6 +81,15 @@
     width: 300px;
     height: 2px;
     background-color: $text-color__003;
+    @media (max-width: 1366px) {
+      margin: 0;
+      width: 2px;
+      height: 60px;
+    }
+  }
+  @media (max-width: 1366px) {
+    margin: 30px 0;
+    flex-direction: row;
   }
 }
 
@@ -71,6 +108,9 @@
     margin-bottom: 40px;
     display: flex;
     align-items: center;
+    @media (max-width: 1366px) {
+      display: none;
+    }
     img {
       margin-right: 52px;
     } 
@@ -81,6 +121,9 @@
     line-height: 26px;
     letter-spacing: -0.5px;
     color: $text-color__006;
+    @media (max-width: 1366px) {
+      display: none;
+    }
     span {
       width: 450px;
       text-align: center;
@@ -112,6 +155,10 @@
   justify-content: space-between;
   &--first-line {
     padding: 0 40px;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
@@ -145,25 +192,79 @@
     text-transform: uppercase;
     color: $text-color__009;
   }
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+  }
 }
 
 .russian-trends {
   flex-direction: row;
+  background-image: url(../img/background--003.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
   &__col:first-child {
     margin-right: 25px;
+    @media (max-width: 768px) {
+      margin: 0 0 20px 0;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }
 
 .trends-col {
+  padding-bottom: 15px;
   width: 50%;
   background: $background-color__002;
   box-shadow: 0px 29px 45px rgba(0, 0, 0, 0.08), 0px 13px 18px rgba(0, 0, 0, 0.02);
   border-radius: 8px;
+  background-image: url(../img/background--004.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  &:last-child {
+    background-image: url(../img/background--005.png);
+    background-position: center left;
+  }
   &__header {
     padding: 15px 30px 25px 30px;
     font-size: 18px;
     line-height: 26px;
     text-align: center;
     color: $text-color__007;
+    @media (max-width: 375px) {
+      padding: 10px 15px 20px 15px;
+    }
+  }
+  &__elem {
+    margin: 0 20px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(43, 41, 45, 0.2);
+    @media (max-width: 375px) {
+      padding: 10px 10px;
+    }
+    img {
+      margin-right: 25px;
+      @media (max-width: 425px) {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 26px;
+    color: $text-color__005;
+    span {
+      padding-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }

@@ -1,20 +1,59 @@
-.principles__row {
-  display: flex;
-  justify-content: space-between;
-  &--second {
-    background-image: url(../img/background--011.png);
-    background-repeat: no-repeat;
-    background-position: right bottom;
+.principles {
+  &__col-one {
+    &--first {
+      flex-grow: 1;
+    }
+    &--second {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      min-width: 480px;
+      @media (max-width: 1280px) {
+        display: none;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    &--first {
+      @media (max-width: 1280px) {
+        flex-direction: column;
+      }
+    }
+    &--second {
+      background-image: url(../img/background--011.png);
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
   }
 }
 
+.principles-content-block {
+  position: relative;
+  min-height: 325px;
+}
+
 .principles-content {
-  margin-bottom: 95px;
-  padding: 45px 0 0 90px;
+  position: relative;
+  left: -100%;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+  height: 0;
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.5px;
   color: $text-color__010;
+  transition: all .3s ease-in-out;
+  &.active {
+    left: 0;
+    height: auto;
+    padding: 45px 0 0 90px;
+    @media (max-width: 1280px) {
+      padding: 30px;
+    }
+  }
   p:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -29,14 +68,19 @@
   height: 135px;
   background-color: $background-color__001;
   border-radius: 0px 50px 0px 0px;
+  @media (max-width: 1280px) {
+    margin-top: 55px;
+  }
 }
 
 .slide-nav {
+  position: relative; 
   margin-top: -65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  z-index: 2;
   &__arrow {
     margin: 0 30px 0 45px;
     width: 20px;
@@ -56,9 +100,9 @@
   padding: 0 5%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-grow: 1;
   &__item {
+    margin-right: 20px;
     padding: 12px;
     text-align: center;
     width: 110px;
@@ -82,8 +126,13 @@
 
 .person-block {
   padding-left: 70px;
-  position: relative;
+  position: absolute;
+  right: -100%;
   width: 480px;
+  transition: all .3s ease-in-out;
+  &.active {
+    right: 0;
+  }
 }
 
 .person-block-text {
@@ -94,7 +143,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 457px;
+  width: 460px;
   font-family: $second-font;
   color: $text-color__002;
   background-color: $background-color__003;
