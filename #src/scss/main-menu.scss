@@ -1,14 +1,23 @@
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
   margin-bottom: 15px;
-  
+  font-family: $main-font;
+  z-index: 3;
+  * {
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }  
   @media (max-width: 1024px) {
     position: fixed;
     left: 0;
     padding-top: 20px;
-    height: 100vh;
+    height: 40px;
+    width: 40px;
     overflow: hidden;
+    transition: .2s ease-in-out all;
     z-index: 3;
     &::before {
       content: '';
@@ -16,15 +25,16 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 0vh;
+      height: 0;
       background-color: $background-color__008;
       transition: .2s ease-in-out all;
     }
     &.active {
       display: block;
+      width: 100%;
+      height: 100vh;
       &::before {
         height: 100vh;
-        transition: .2s ease-in-out all;
       }
       & .main-menu {
         left: 0;
@@ -37,19 +47,42 @@
 .main-menu {
   position: relative;
   margin: 0 auto;
-  padding: 0 180px;
-  width: 935px;
+  padding: 0 50px;
+  width: 100%;
   height: 55px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: $background-color__002;
-  border-radius: 0px 0px 20px 20px;
   &__elem {
+    margin-right: 5%;
+    position: relative;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: $text-color__001;
+    text-align: center;
+    transition: 0.3s;
+    @media (max-width: 1024px) {
+      margin-right: 0;
+      text-align: left;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 120%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $background-color__003;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.2s;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
   @media (max-width: 1024px) {
     position: relative;
@@ -144,5 +177,13 @@
     &.active span {
       display: none;
     }
+  }
+}
+
+.scroll {
+  opacity: 0.8;
+  transition: all .3s ease-in-out;
+  &:hover {
+    opacity: 1;
   }
 }

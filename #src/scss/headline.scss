@@ -2,12 +2,18 @@
   display: flex;
   align-items: flex-start;
   height: 615px;
+  @media (max-width: 1280px) {
+    height: auto;
+  }
   &__col-one {
     display: flex;
     align-items: stretch;
     margin-right: 40px;
     background-image: url(../img/background--001.png);
     background-repeat: no-repeat;
+    @media (max-width: 1280px) {
+      display: none;
+    }
   }
   &__col-two {
     min-width: 50%;
@@ -20,6 +26,9 @@
     background-image: url(../img/background--002.png);
     background-repeat: no-repeat;
     background-position: 98% 80%;
+    @media (max-width: 1280px) {
+      padding: 30px 0 0 0;
+    }
   }
   &__carousel {
     position: relative;
@@ -121,11 +130,18 @@
   margin-bottom: 40px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-weight: normal;
   font-size: 30px;
   line-height: 35px;
   letter-spacing: 0.6px;
   color: $text-color__003;
+  @media (max-width: 1280px) {
+    padding: 0 0 0 40px;
+  }
+  @media (max-width: 425px) {
+    font-size: 25px;
+  }
   &__accent {
     margin: 0 6px;
     padding: 12px 6px;
@@ -133,7 +149,6 @@
     background-color: $background-color__003;
     &--first {
       padding-left: 12px;
-      margin-left: 0;
     }
   }
 }
@@ -146,6 +161,9 @@
   color: $text-color__003;
   @media (max-width: 1440px) {
     font-size: 16px;
+  }
+  @media (max-width: 1280px) {
+    padding: 30px 40px;
   }
 }
 
