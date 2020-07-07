@@ -1522,12 +1522,20 @@ body {
   opacity: 1;
 }
 
+.popup__header {
+  padding-bottom: 25px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: -.5px;
+  color: #323E48;
+}
+
 .popup__block {
   position: relative;
-  width: 100%;
   max-height: 85vh;
   padding: 30px 50px;
-  border-radius: 30px;
+  border-radius: 5px;
   background-color: #FFFFFF;
   background-image: url(../img/background--012.png);
   background-repeat: no-repeat;
@@ -1597,6 +1605,62 @@ body {
 .popup-block {
   scrollbar-width: thin;
   scrollbar-color: #F70263 transparent;
+}
+
+.textarea-feedback {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 10px 25px;
+  display: block;
+  font-size: 14px;
+  line-height: 129.6%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(52, 62, 72, 0.72);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(52, 62, 72, 0.72);
+}
+
+.textarea-feedback:focus {
+  border: 1px solid #F70263;
+  outline: 1px solid #F70263;
+}
+
+.form-button {
+  padding: 20px 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #F70263;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-button {
+  text-decoration: none;
+  padding: 30px 15px;
+  text-align: center;
+  color: #323E48;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #F70263;
+  transition: all .2s ease-in-out;
+}
+
+.product-button:not(:last-child) {
+  margin-right: 15px;
+}
+
+.product-button:hover {
+  color: #FFFFFF;
+  background-color: #F70263;
 }
 
 @media (max-width: 1440px) {
@@ -1916,12 +1980,23 @@ body {
   }
 
   .popup__block {
-    padding: 20px 30px 10px 30px;
+    padding: 20px 30px;
+  }
+
+  .popup__block {
+    padding: 20px 15px;
   }
 
   .popup__block p {
     font-size: 14px;
     line-height: 24px;
+  }
+}
+
+@media (max-width: 972px) {
+  .product-button:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
 
@@ -2035,6 +2110,11 @@ body {
 @media (max-width: 425px) {
   .main-title {
     font-size: 25px;
+  }
+
+  .about-cc {
+    padding: 30px 20px;
+    line-height: 25px;
   }
 
   .trend-elem {
