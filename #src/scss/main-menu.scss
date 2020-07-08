@@ -63,6 +63,18 @@
     color: $text-color__001;
     text-align: center;
     transition: 0.3s;
+    &--popup {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      color: $text-color__002;
+      background-color: $background-color__003;
+      height: 60%;
+      border-radius: 5px;
+      &::after {
+        display: none;
+      }
+    }
     @media (max-width: 1024px) {
       margin-right: 0;
       text-align: left;
@@ -116,6 +128,12 @@
       font-size: 16px;
       margin-bottom: 30px;
       color: $text-color__002;
+      &--popup {
+        margin-left: 20px;
+        padding: 10px;
+        width: auto;
+        border-radius: 5px;
+      }
     }
   }
 }

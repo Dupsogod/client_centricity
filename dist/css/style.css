@@ -455,6 +455,20 @@ body {
   transition: 0.3s;
 }
 
+.main-menu__elem--popup {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #FFFFFF;
+  background-color: #F70263;
+  height: 60%;
+  border-radius: 5px;
+}
+
+.main-menu__elem--popup::after {
+  display: none;
+}
+
 .main-menu__elem::after {
   position: absolute;
   content: "";
@@ -586,7 +600,7 @@ body {
 }
 
 .carousel-item__person img {
-  width: 100%;
+  width: 110%;
 }
 
 .carousel-item__quote {
@@ -975,7 +989,7 @@ body {
   padding: 0;
   width: 100%;
   height: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: -0.5px;
   color: #4D4D4D;
@@ -989,7 +1003,7 @@ body {
 }
 
 .principles-content p:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .person-slide-nav {
@@ -1933,6 +1947,13 @@ body {
     font-size: 16px;
     margin-bottom: 30px;
     color: #FFFFFF;
+  }
+
+  .main-menu__elem--popup {
+    margin-left: 20px;
+    padding: 10px;
+    width: auto;
+    border-radius: 5px;
   }
 
   .burger.active span {
