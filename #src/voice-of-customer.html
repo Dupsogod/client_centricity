@@ -9,9 +9,12 @@
 <body>
   @@include('_main-menu.html') 
 
-  <div class="wrapper">
-
-
+  <div class="wrapper wrapper--metrics">
+    @@include('_customer-nav.html') 
+    <div class="wrapper__content">
+      @@include('_metrics-headline.html')
+      @@include('_metrics-main.html')
+    </div>
   </div>
   
   @@include('_footer.html')

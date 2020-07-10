@@ -5,5 +5,5 @@
 @@include('tabs.js') 
 @@include('tabs2.js') 
 @@include('burger.js') 
-@@include('scroll.js') 
-@@include('popup.js') 
+@@include('popup.js')
+@@include('accordion.js') 

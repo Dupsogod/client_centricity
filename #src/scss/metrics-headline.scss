@@ -1,0 +1,22 @@
+.content-block--metrics {
+  display: none;
+  padding: 30px 40px;
+  min-height: 100%;
+  overflow: auto;
+  &-headline {
+    background-image: url(../img/background--012.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.metrics-headline {
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-color__003;
+}

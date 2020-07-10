@@ -3507,15 +3507,6 @@ $('.btn').on('click', function () {
 $('.burger').click(function () {
 	$('.burger, .header').toggleClass('active');
 }) 
-var offsetY = 300;
-$(window).scroll(function () {
-  if ($(this).scrollTop() > offsetY) {
-    $('.main-menu').addClass('scroll');
-  } else {
-    $('.main-menu').removeClass('scroll');
-  }
-});
- 
 $('.popup-open').click(function () {
   var local_id = $(this).attr('data-tab');
   $("body").css("overflow","hidden");
@@ -3527,6 +3518,18 @@ $('.popup-close').click(function () {
   $(this).parents('.popup-fade').fadeOut();
   $("body").css("overflow","auto");
   return false;
+});
+
+
+$(document).ready(function () {
+  $('.metrics-header').on('click', function (){
+    var acctiveTab =  $(this);
+    if (!$(this).hasClass('active')) {
+      $(this).parent().siblings().children().removeClass('active');
+      $(this).addClass('active');
+      $(this).siblings().addClass('active');
+    };
+  })
 });
 
  
