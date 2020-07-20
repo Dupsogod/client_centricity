@@ -137,7 +137,7 @@
     cursor: pointer;
     @media (max-width: 425px) {
       margin-right: 0;
-      padding: 5px 15px 10px 15px;
+      padding: 5px 5px 10px 5px;
       width: auto;
       height: auto;
       box-shadow: none;
@@ -159,6 +159,9 @@
       line-height: 16px;
       letter-spacing: 0.9799px;
       color: $text-color__011;
+      @media (max-width: 375px) {
+        font-size: 12px;
+      }
     }
   }
   @media (max-width: 768px) {

@@ -750,6 +750,19 @@ body {
   color: #323E48;
 }
 
+.join-btn {
+  margin: 25px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  padding: 15px 0;
+  font-size: 25px;
+  color: #FFFFFF;
+  background-color: #F70263;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .trends {
   padding: 30px 45px 70px 45px;
   height: auto;
@@ -767,6 +780,11 @@ body {
 .trends__col-two {
   flex-grow: 1;
   padding-left: 10%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 600px;
 }
 
 .trends-nav {
@@ -800,6 +818,7 @@ body {
   height: 25px;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
 }
 
 .trends-nav__item.active:first-child::before {
@@ -810,12 +829,20 @@ body {
   background-image: url(../img/icon--compass_non-active.svg);
 }
 
-.trends-nav__item.active:last-child::before {
+.trends-nav__item--russian.active::before {
   background-image: url(../img/icon--sanctuary_active.svg);
 }
 
-.trends-nav__item:last-child::before {
+.trends-nav__item--russian::before {
   background-image: url(../img/icon--sanctuary_non-active.svg);
+}
+
+.trends-nav__item.active:last-child::before {
+  background-image: url(../img/icon--client_active.svg);
+}
+
+.trends-nav__item:last-child::before {
+  background-image: url(../img/icon--client_non-active.svg);
 }
 
 .trends-nav__line {
@@ -879,6 +906,10 @@ body {
   background-position: center center;
 }
 
+.world-trends__content--russian {
+  background-size: contain;
+}
+
 .trends-row {
   margin-bottom: 20px;
   width: 100%;
@@ -892,14 +923,23 @@ body {
 }
 
 .trend-elem {
-  padding: 22px 0 0 41px;
+  padding: 22px 20px 22px 41px;
   display: flex;
   flex-direction: column;
   width: 370px;
-  height: 137px;
+  height: auto;
   background-color: #FFFFFF;
   border: 1px solid #DFDFDF;
   border-radius: 5px;
+}
+
+.trend-elem__name {
+  margin-bottom: 12px;
+  display: flex;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 20px;
+  color: #D41367;
 }
 
 .trend-elem__proc {
@@ -926,17 +966,23 @@ body {
   color: #777777;
 }
 
+/* 
 .russian-trends {
   flex-direction: row;
   background-image: url(../img/background--003.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-}
-
-.russian-trends__col:first-child {
-  margin-right: 25px;
-}
+  &__col:first-child {
+    margin-right: 25px;
+    @media (max-width: 768px) {
+      margin: 0 0 20px 0;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+} */
 
 .trends-col {
   padding-bottom: 15px;
@@ -1925,6 +1971,12 @@ body {
   background-color: #F70263;
 }
 
+.form-name {
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #777777;
+}
+
 @media (max-width: 1440px) {
   .about-cc {
     font-size: 16px;
@@ -2286,14 +2338,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .russian-trends__col:first-child {
-    margin: 0 0 20px 0;
-  }
-
-  .russian-trends {
-    flex-direction: column;
-  }
-
   .trends-col {
     width: 100%;
   }
@@ -2386,6 +2430,21 @@ body {
     line-height: 25px;
   }
 
+  .join-btn {
+    width: 250px;
+    font-size: 20px;
+  }
+
+  .trends-nav__item {
+    margin-left: 20px;
+    width: 33.333%;
+  }
+
+  .trends-nav__item:first-child {
+    padding-right: 5px;
+    justify-content: flex-end;
+  }
+
   .trend-elem {
     padding: 22px 10px 20px 22px;
     width: 100%;
@@ -2406,7 +2465,7 @@ body {
 
   .slide-person-block__item {
     margin-right: 0;
-    padding: 5px 15px 10px 15px;
+    padding: 5px 5px 10px 5px;
     width: auto;
     height: auto;
     box-shadow: none;
@@ -2448,6 +2507,17 @@ body {
   .trends-col__elem {
     padding: 10px 10px;
   }
+
+  .slide-person-block__item span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .trends-nav__item {
+    margin-left: 10px;
+    font-size: 14px;
+  }
 }
 
 .webp .owl-carousel .owl-video-play-icon { background: url(owl.video.play.webp) no-repeat; }
@@ -2457,8 +2527,6 @@ body {
 .webp .headline__col-two { background-image: url(../img/background--002.webp); }
 
 .webp .world-trends__content { background-image: url(../img/background--006.webp); }
-
-.webp .russian-trends { background-image: url(../img/background--003.webp); }
 
 .webp .trends-col { background-image: url(../img/background--004.webp); }
 
