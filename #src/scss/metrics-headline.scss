@@ -1,5 +1,6 @@
 .content-block--metrics {
-  display: none;
+  display: flex;
+  flex-direction: column;
   padding: 30px 40px;
   min-height: 100%;
   overflow: auto;
@@ -7,10 +8,6 @@
     background-image: url(../img/background--012.png);
     background-repeat: no-repeat;
     background-position: right;
-  }
-  &.active {
-    display: flex;
-    flex-direction: column;
   }
 }
 

@@ -1,7 +1,7 @@
 .headline {
   display: flex;
   align-items: flex-start;
-  height: 615px;
+  height: 655px;
   @media (max-width: 1280px) {
     height: auto;
   }
@@ -42,7 +42,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 615px;
+  height: 635px;
   &__person {
     min-height: 400px;
     display: flex;
@@ -84,12 +84,19 @@
     }
   }
   &__name {
+    display: flex;
+    flex-direction: column;
     padding: 20px 0 20px 10px;
     align-self: flex-start;
     font-size: 22px;
-    line-height: 32px;
+    line-height: 25px;
     letter-spacing: 0.3762px;
     color: $text-color__003;
+    & span {
+      font-size: 12px;
+      padding: 5px 185px 0 0;
+      line-height: 17px;
+    }
   }
 }
 

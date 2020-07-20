@@ -1,0 +1,75 @@
+.content-block--metrics-already-make {
+  background-image: url(../img/background--013.png);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.already-make-content {
+  margin: 30px 0;
+  &__nav {
+    display: flex;
+    border-bottom: 2px solid $background-color__003;
+  }
+}
+
+.already-make-content__nav {
+  padding: 0 25px;
+}
+
+.already-nav-item {
+  padding: 15px 35px;
+  margin-bottom: -2px;
+  color: $text-color__014;
+  font-weight: 500;
+  border-left: 2px solid transparent;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  cursor: pointer;
+  &.active {
+    color: $background-color__003;
+    border-left-color: $background-color__003;
+    border-top-color: $background-color__003;
+    border-right-color: $background-color__003;
+    background-color: $background-color__002;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.already-content {
+  padding: 20px;
+  ul {
+    margin: 5px 0 0 0;
+    padding: 0;
+    li {
+      position: relative;
+      margin-bottom: 3px;
+      padding-left: 20px;
+      list-style-type: none;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -.5px;
+      color: #4d4d4d;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/icon--tick-first.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      li {
+        &::before {
+          background-image: url(../img/icon--tick-second.svg);
+        }
+      }
+    }
+  }
+  display: none;
+  &.active {
+    display: block;
+  }
+}

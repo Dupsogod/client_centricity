@@ -4,7 +4,9 @@ $(document).ready(function () {
   owl.owlCarousel({
     loop: true,
     margin: 10,
-    navSpeed: 500,
+    navSpeed: 1000,
+    autoplayTimeout: 10000,
+    smartSpeed: 500,
     nav: false,
     dots: true,
     dotsContainer: ".owl-dots",
