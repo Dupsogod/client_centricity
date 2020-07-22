@@ -470,9 +470,15 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  color: rgba(52, 62, 72, 0.72);
+  color: #323E48;
+  text-transform: uppercase;
   text-align: center;
   transition: 0.3s;
+}
+
+.main-menu__elem:hover,
+.main-menu__elem.active {
+  font-weight: 600;
 }
 
 .main-menu__elem span {
@@ -508,6 +514,7 @@ body {
   transition: transform 0.2s;
 }
 
+.main-menu__elem.active::after,
 .main-menu__elem:hover::after {
   transform: scaleX(1);
   transform-origin: left;
@@ -914,7 +921,6 @@ body {
   margin-bottom: 20px;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -923,6 +929,7 @@ body {
 }
 
 .trend-elem {
+  position: relative;
   padding: 22px 20px 22px 41px;
   display: flex;
   flex-direction: column;
@@ -933,17 +940,35 @@ body {
   border-radius: 5px;
 }
 
+.trend-elem__row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.trend-elem__row .trend-elem__proc {
+  margin-top: 15px;
+  margin-left: 15px;
+  align-items: flex-end;
+}
+
 .trend-elem__name {
   margin-bottom: 12px;
   display: flex;
-  font-weight: 900;
-  font-size: 20px;
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
   line-height: 20px;
   color: #D41367;
 }
 
 .trend-elem__proc {
   margin-bottom: 12px;
+  /* margin-right: 25px; */
+  /*!*/
   display: flex;
   font-weight: 900;
   font-size: 30px;
@@ -962,6 +987,7 @@ body {
 .trend-elem__text {
   font-size: 14px;
   line-height: 16px;
+  text-align: right;
   text-transform: uppercase;
   color: #777777;
 }
@@ -1598,15 +1624,23 @@ body {
 
 .metrics-header__number {
   margin-right: 10px;
-  padding: 10px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 20px;
   color: #FFFFFF;
   background-color: #F70263;
   border-radius: 50%;
+}
+
+.metrics-header__number::after {
+  content: '%';
+  font-weight: 200;
+  font-size: 15px;
+  color: #FFFFFF;
 }
 
 .metrics-header__title {
@@ -1654,12 +1688,19 @@ body {
 .metrics-diagramm {
   height: 0;
   overflow: hidden;
-  transition: all .2s ease-in;
+  text-align: center;
+  transition: all .4s ease-in;
+}
+
+.metrics-diagramm img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .metrics-diagramm.active {
-  height: 200px;
-  background-color: red;
+  padding: 25px 0;
+  height: 450px;
 }
 
 .content-block--metrics-already-make {
@@ -1741,6 +1782,33 @@ body {
 
 .already-content.active {
   display: block;
+}
+
+.dynamics-block {
+  width: 100%;
+  padding: 25px 0 0 0;
+  overflow-x: auto;
+}
+
+/*scroll webki*/
+
+.dynamics-block::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.dynamics-block::-webkit-scrollbar {
+  height: 5px;
+}
+
+.dynamics-block::-webkit-scrollbar-thumb {
+  background-color: #F70263;
+}
+
+/*scroll moz*/
+
+.dynamics-block {
+  scrollbar-width: thin;
+  scrollbar-color: #F70263 transparent;
 }
 
 .footer {
@@ -1960,6 +2028,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #F70263;
   transition: all .2s ease-in-out;
+  cursor: pointer;
 }
 
 .product-button:not(:last-child) {
@@ -1982,8 +2051,15 @@ body {
     font-size: 16px;
   }
 
+  .join-btn {
+    margin: 10px auto 0 auto;
+    padding: 10px 0;
+    font-size: 20px;
+  }
+
   .trends__col-two {
     padding: 0 10px;
+    align-items: center;
   }
 
   .action__header {
@@ -2011,6 +2087,11 @@ body {
 }
 
 @media (max-width: 1366px) {
+  .about-cc {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
   .trends {
     flex-direction: column;
     padding: 30px 20px 30px 20px;
@@ -2427,7 +2508,6 @@ body {
 
   .about-cc {
     padding: 30px 20px;
-    line-height: 25px;
   }
 
   .join-btn {

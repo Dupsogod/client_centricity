@@ -19,6 +19,7 @@
     min-height: 600px;
     @media (max-width: 1440px) {
       padding: 0 10px;
+      align-items: center;
     }
   }
   @media (max-width: 1366px) {
@@ -183,7 +184,6 @@
   margin-bottom: 20px;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   &--first-line {
     padding: 0 40px;
@@ -198,6 +198,7 @@
 }
 
 .trend-elem {
+  position: relative;
   padding: 22px 20px 22px 41px;
   display: flex;
   flex-direction: column;
@@ -206,16 +207,31 @@
   background-color: $background-color__002;
   border: 1px solid #DFDFDF;
   border-radius: 5px;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse; 
+    width: 100%;
+    .trend-elem__proc {
+      margin-top: 15px;
+      margin-left: 15px;
+      align-items: flex-end;
+    }
+  }
   &__name {
     margin-bottom: 12px;
     display: flex;
-    font-weight: 900;
-    font-size: 20px;
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
     line-height: 20px;
     color: $text-color__007;
   }
   &__proc {
     margin-bottom: 12px;
+    /* margin-right: 25px; */ /*!*/
     display: flex;
     font-weight: 900;
     font-size: 30px;
@@ -232,6 +248,7 @@
   &__text {
     font-size: 14px;
     line-height: 16px;
+    text-align: right;
     text-transform: uppercase;
     color: $text-color__009;
   }

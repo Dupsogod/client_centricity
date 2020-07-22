@@ -61,9 +61,14 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    color: $text-color__001;
+    color: $text-color__003;
+    text-transform: uppercase;
     text-align: center;
     transition: 0.3s;
+    &:hover,
+    &.active {
+      font-weight: 600;
+    }
     & span {
       display: flex;
       justify-content: center;
@@ -97,6 +102,7 @@
       transform-origin: right;
       transition: transform 0.2s;
     }
+    &.active::after,
     &:hover::after {
       transform: scaleX(1);
       transform-origin: left;

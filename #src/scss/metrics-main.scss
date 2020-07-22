@@ -15,15 +15,22 @@
   cursor: pointer;
   &__number {
     margin-right: 10px;
-    padding: 10px;
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 900;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 20px;
     color: $text-color__002;
     background-color: $background-color__003;
     border-radius: 50%;
+    &::after {
+      content: '%';
+      font-weight: 200;
+      font-size: 15px;
+      color: $text-color__002;
+    }  
   }
   &__title {
     margin-right: 10px;
@@ -65,10 +72,16 @@
 .metrics-diagramm {
   height: 0;
   overflow: hidden;
-  transition: all .2s ease-in;
+  text-align: center;
+  transition: all .4s ease-in;
+  img {
+    height: 300px;
+    object-fit: cover;
+  }
   &.active {
-    height: 200px;
-    background-color: red;
+    padding: 25px 0;
+    height: 450px;
+    
   }
 }
 
