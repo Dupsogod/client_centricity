@@ -1,6 +1,9 @@
 <section class="content-block content-block--metrics content-block--metrics-headline" id="metrics-main">
   <h1 class="header-content header-content--metrics">
     Основные метрики
+    <span class="header-content__date">
+      23.07.2020
+    </span>
   </h1>
   <div class="metrics-content">
     <div class="metrics-content__elem">
@@ -15,14 +18,28 @@
           показатель лояльности к компании, готовность порекомендовать компанию друзьям или знакомым
         </div>
       </header>
-      <div class="metrics-diagramm">
+      <div class="metrics-diagramm metrics-diagramm--nps">
+        <div class="metrics-diagramm__title">
+          <img src="img/img--nps.svg" alt="NPS">
+        </div>
         <img src="img/delete--nps.jpg" alt="NPS">
       </div>
     </div>
     <div class="metrics-content__elem">
       <header class="metrics-header">
-        <div class="metrics-header__number">
-          64
+        <div class="metrics-header__number-block">
+          <div class="metrics-header__number metrics-header__number--block">
+            86
+          </div>
+          <div class="metrics-header__number metrics-header__number--block">
+            74
+          </div>
+          <div class="metrics-header__number metrics-header__number--block">
+            71
+          </div>
+          <div class="metrics-header__number metrics-header__number--block">
+            59
+          </div>
         </div>
         <div class="metrics-header__title">
           CSI
@@ -31,14 +48,34 @@
           показатель удовлетворенности (соответствие ожиданиям)
         </div>
       </header>
-      <div class="metrics-diagramm">
+      <div class="metrics-diagramm metrics-diagramm--csi">
+        <div class="metrics-diagramm__title">
+          <img src="img/img--csi.svg" alt="CSI">
+          <div class="metrics-diagramm-title">
+            <p>
+              Оценивается уровень соответствия ожиданиям клиентов. Все параметры продукта/канала делятся по важности и удовлетворенности
+            </p>
+            <ol>
+              Расчет производится по следующей логике:
+              <li>
+                Определяются и ранжируются по важности ключевые параметры точки контакта (звонок в контактный центр, обращение в отделение банка, использование ИБ/МБ, курьерская доставка, контакт с роботом Романом), которые влияют на степень удовлетворенности клиентов;
+              </li>
+              <li>
+                Определяется уровня удовлетворенности каждым из параметров в отдельности;
+              </li>
+              <li>
+                Получается числовой показатель, отражающий общее мнение, с учетом значимости каждого из параметров
+              </li>
+            </ol>
+          </div>
+        </div>
         <img src="img/delete--csi.jpg" alt="CSI">
       </div>
     </div>
     <div class="metrics-content__elem">
       <header class="metrics-header">
         <div class="metrics-header__number">
-          85
+          86
         </div>
         <div class="metrics-header__title">
           CSAT
@@ -47,13 +84,23 @@
           индекс удовлетворенности (эмоциональная оценка контакта с компанией)
         </div>
       </header>
-      <div class="metrics-diagramm">
+      <div class="metrics-diagramm metrics-diagramm--csat">
+        <div class="metrics-diagramm__title">
+          <img src="img/img--csat.svg" alt="CSAT">
+          <div class="metrics-diagramm-title">
+            CSAT можно использовать сразу после контакта клиента с  компанией — после покупки товара, посещения сайта, общения с контактным центром.<br>
+            Чтобы вычислить CSAT, клиентов спрашивают, насколько они удовлетворены продуктом или услугой. А для ответа предлагают шкалу от 1 до 5 баллов, где 1 — совершенно неудовлетворен, а 5 — полностью удовлетворен. Довольными считаются потребители, ответившие: 4 или 5 баллов. Далее полученные результаты рассчитывают по формуле: (количество довольных клиентов / количество опросов) х 100 = % удовлетворенных клиентов.
+          </div>
+        </div>
         <img src="img/delete--csat.jpg" alt="CSAT">
       </div>
     </div>
   </div>
   <h1 class="header-content header-content--metrics">
     Метрики в целом
+    <span class="header-content__date">
+      23.07.2020
+    </span>
   </h1>
   <div class="metrics-content">
     <div class="metrics-content__elem">
@@ -65,7 +112,7 @@
           Contact rate 
         </div>
         <div class="metrics-header__subtitle">
-          доля звонков в контактный центр уникальных клиентов от активной клиентской базы
+          такое количество клиентов ежемесячно звонит в контактный центр банка и получает информацию от сотрудника. считается в %% от активной клиентской базы. ежемесячно
         </div>
       </header>
       <div class="metrics-diagramm">
@@ -81,7 +128,7 @@
           Visit rate  
         </div>
         <div class="metrics-header__subtitle">
-          доля визитов в отделения банка уникальных клиентов от активной клиентской базы
+          такое количество клиентов ежемесячно приходят в отделения банка для решения сервисных вопросов. считается в %% от активной клиентской базы. ежемесячно.
         </div>
       </header>
       <div class="metrics-diagramm">
@@ -97,7 +144,7 @@
           Digital rate  
         </div>
         <div class="metrics-header__subtitle">
-          доля заходов в мобильный/интернет банк уникальных клиентов от активной клиентской базы
+          такое количество клиентов ежемесячно заходят в МБ и ИБ для просмотра любой информации или совершения каких-либо действий. считается в %% от активной клиентской базы. ежемесячно. 
         </div>
       </header>
       <div class="metrics-diagramm">
@@ -113,7 +160,7 @@
           Complaints Rate 
         </div>
         <div class="metrics-header__subtitle">
-          доля претензионных обращений  уникальных клиентов от активной клиентской базы
+          такое количество клиентов ежемесячно обращается в банк с претензией через любой доступный канал обслуживания. считается в %% от активной клиентской базы. ежемесячно. 
         </div>
       </header>
       <div class="metrics-diagramm">

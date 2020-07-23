@@ -13,6 +13,46 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  &__number-block {
+    position: relative;
+    width: 55px;
+    margin-right: 10px;
+    display: flex;
+    transition: all .2s ease-in-out;
+    .metrics-header__number--block {
+      position: relative;
+      margin-right: 0;
+      &:not(:first-child) {
+        position: absolute;
+      }
+      &:nth-child(2) {
+        left: -5px;
+        transition: all .2s ease-in-out;
+      }
+      &:nth-child(3) {
+        left: -10px;
+        transition: all .2s ease-in-out;
+      }
+      &:nth-child(4) {
+        left: -15px;
+        transition: all .2s ease-in-out;
+      } 
+    }
+    &:hover {
+      width: 235px;
+    }
+    &:hover .metrics-header__number--block {
+      &:nth-child(2) {
+        left: 60px;
+      }
+      &:nth-child(3) {
+        left: 120px;
+      }
+      &:nth-child(4) {
+        left: 180px;
+      } 
+    }
+  }
   &__number {
     margin-right: 10px;
     width: 55px;
@@ -24,7 +64,9 @@
     font-size: 20px;
     color: $text-color__002;
     background-color: $background-color__003;
+    border: 2px solid $background-color__002;
     border-radius: 50%;
+    
     &::after {
       content: '%';
       font-weight: 200;
@@ -41,6 +83,7 @@
     color: $text-color__007;
   }
   &__subtitle {
+    width: 60%;
     font-size: 14px;
     line-height: 16px;
     color: $text-color__009;
@@ -80,8 +123,40 @@
   }
   &.active {
     padding: 25px 0;
-    height: 450px;
-    
+    height: 420px; 
+  }
+  &--nps.active {
+    height: 700px;
+  }
+  &--csi.active {
+    height: 900px;
+  }
+  &--csat.active {
+    height: 900px;
+  }
+}
+
+.metrics-diagramm__title {
+  padding: 0 0 30px 0;
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+  }
+}
+
+.metrics-diagramm-title {
+  text-align: left;
+  padding: 30px 0;
+  color: $text-color__010;
+}
+
+.metrics-headline-img {
+  padding: 25px 0 30px 0;
+  text-align: center;
+  img {
+    width: 60%;
   }
 }
 

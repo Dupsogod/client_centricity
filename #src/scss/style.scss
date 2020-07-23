@@ -99,6 +99,8 @@ body {
 }
 
 .header-content {
+  display: flex;
+  justify-content: space-between;
   padding-top: 7px;
   padding-left: 15px;
   font-weight: normal;
@@ -106,6 +108,9 @@ body {
   line-height: 26px;
   letter-spacing: -0.5px;
   color: $text-color__003;
+  &__date {
+    font-size: 20px;
+  }
   &--principles {
     padding: 45px 0 0 60px;
     @media (max-width: 1280px) {
@@ -125,12 +130,14 @@ body {
   &--metrics {
     padding: 0;
   }
+
 }
 
 @import "main-menu";
 @import "headline";
 @import "trends";
 @import "principles";
+@import "client-centric-model";
 @import "targets";
 @import "steps";
 
