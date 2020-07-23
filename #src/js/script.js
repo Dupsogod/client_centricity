@@ -7,6 +7,6 @@
 @@include('burger.js') 
 @@include('popup.js')
 @@include('accordion.js') 
-@@include('scrollNav.js') 
+/* @@include('scrollNav.js')  */
 @@include('activeMenu.js') 
 
