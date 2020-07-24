@@ -3535,7 +3535,7 @@ $(document).ready(function () {
 });
 
  
-jQuery(function ($) {
+/* jQuery(function ($) {
   var section = $('.content-block--metrics'),
     nav = $('.customer-nav'),
     navHeight = nav.outerHeight(); // получаем высоту навигации 
@@ -3572,7 +3572,7 @@ jQuery(function ($) {
     return false;
   });
 
-}); 
+});  */
 $(function() {
   var location = window.location.href;
   var cur_url = '/' + location.split('/').pop();
