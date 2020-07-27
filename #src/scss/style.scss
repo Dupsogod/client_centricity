@@ -96,6 +96,10 @@ body {
   background-color: $background-color__002;
   border-radius: 30px;
   overflow: hidden;
+  &__row {
+    padding: 30px 0 0 0;
+    display: flex;
+  } 
 }
 
 .header-content {
@@ -209,5 +213,10 @@ body {
 @import "already-make";
 @import "profile-client";
 @import "dynamics";
+
+@import "survey.scss";
+@import "adherents.scss";
+
+
 @import "footer";
 @import "popup";
