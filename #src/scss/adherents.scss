@@ -34,7 +34,7 @@
       right: 20%;
       transition: all .5s ease-in-out;
       &--branch {
-        height: 240px;
+        height: 230px;
       }
     }
     &__text {
@@ -42,7 +42,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0.5);
-      font-weight: 700;
+      font-weight: 300;
       font-size: 30px;
       text-transform: uppercase;
       color: transparent;
@@ -60,18 +60,23 @@
         right: 5%;
       }
       .box__image--branch {
-        height: 200px;
+        height: 180px;
       }
       .box__text {
         color: $text-color__002;
         transform: translate(-100%, -50%) scale(1);
       }
       .text__name {
+        font-family: $second-font;
+        font-weight: 300;
         opacity: 1;
         transition: all .5s ease-in-out;
+        &:hover .text__position {
+          opacity: 1;
+          height: 110px;
+        }
       }
       .text__position {
-        opacity: 1;
         transition: all .5s ease-in-out;
       }
     }
@@ -83,15 +88,20 @@
   display: flex;
   flex-direction: column;
   &__name {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 18px;
     color: $text-color__003;
     opacity: 0;
   }
   &__position {
-    font-size: 10px;
+    padding-top: 5px;
+    font-size: 16px;
+    text-transform: none;
     color: $text-color__009;
     opacity: 0;
+    height: 0;
   }
 }
 
@@ -109,7 +119,7 @@
 }
 
 .contact-center {
-  background-image: url(../img/background--021.svg);
+  background-image: url(../img/background--017.svg);
 }
 
 .oc {
@@ -122,4 +132,57 @@
 
 .head-office {
   background-image: url(../img/background--020.svg);
+}
+
+
+
+.description-adherents { 
+  margin-top: 30px;
+  &__header {
+    font-size: 20px;
+    color: $text-color__001;
+  }
+  ul {
+    margin: 15px 0 0 0;
+    padding: 0;
+    li {
+      position: relative;
+      margin-bottom: 3px;
+      padding-left: 20px;
+      list-style-type: none;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -.5px;
+      color: #4d4d4d;
+      &::before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/icon--tick-first.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.button-block-adherents {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: $text-color__001;
+}
+
+.button-adherents {
+  margin-left: 15px;
+  padding: 10px 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $text-color__002;
+  background-color: $background-color__003;
+  border-radius: 3px;
+  cursor: pointer;
 }

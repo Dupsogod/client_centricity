@@ -1,0 +1,46 @@
+.metro-bloks {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  a {
+    padding: 25px 10px 0 10px;
+    width: 25%;
+    height: 350px;
+    font-family: $third-font;
+    text-align: center;
+    color: $text-color__002;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% auto;
+    transition: all .3s ease-in-out;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:hover {
+      background-size: 100% auto;
+    }
+    &.credit-block:hover,
+    &.deposit-block:hover {
+      background-size: 150% auto;
+    }
+  }
+  .debet-card-block {
+    background-color: $background-color__003;
+    background-image: url(../img/img--debet-card-001.svg);
+  }
+  .credit-block {
+    background-color: #5F666C;
+    background-image: url(../img/img--credit-001.svg);
+    background-size: 100% auto;
+  }
+  .deposit-block {
+    background-color: #007FE6;
+    background-image: url(../img/img--deposit-001.svg);
+    background-size: 100% auto;
+  }
+  .commission-block {
+    background-color: #dfa548;
+    background-image: url(../img/img--commission-products-001.svg);
+  }
+}
