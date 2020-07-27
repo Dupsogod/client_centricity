@@ -1940,6 +1940,7 @@ body {
 }
 
 .accordeon-boxes {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -1984,7 +1985,7 @@ body {
   height: 240px;
 }
 
-.accordeon-boxes .box .text {
+.accordeon-boxes .box__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2003,16 +2004,50 @@ body {
 
 .accordeon-boxes .box:hover .box__header {
   margin: 0;
-  color: #323E48;
+  text-align: right;
+  padding-right: 10%;
 }
 
 .accordeon-boxes .box:hover .box__image {
   right: 5%;
 }
 
-.accordeon-boxes .box:hover .text {
-  color: #fff;
-  transform: translate(-50%, -50%) scale(1);
+.accordeon-boxes .box:hover .box__image--branch {
+  height: 200px;
+}
+
+.accordeon-boxes .box:hover .box__text {
+  color: #FFFFFF;
+  transform: translate(-100%, -50%) scale(1);
+}
+
+.accordeon-boxes .box:hover .text__name {
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+
+.accordeon-boxes .box:hover .text__position {
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+
+.text {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text__name {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #323E48;
+  opacity: 0;
+}
+
+.text__position {
+  font-size: 10px;
+  color: #777777;
+  opacity: 0;
 }
 
 .mainteam {
@@ -2028,7 +2063,7 @@ body {
 }
 
 .contact-center {
-  background-image: url(../img/background--017.svg);
+  background-image: url(../img/background--021.svg);
 }
 
 .oc {

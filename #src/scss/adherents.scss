@@ -1,4 +1,5 @@
 .accordeon-boxes {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -36,7 +37,7 @@
         height: 240px;
       }
     }
-    .text {
+    &__text {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -52,18 +53,48 @@
       background-size: 50% 100%;
       .box__header {
         margin: 0;
-        color: $text-color__003;
+        text-align: right;
+        padding-right: 10%;
       }
-      .box__image  {
+      .box__image {
         right: 5%;
       }
-      .text {
-        color: #fff;
-        transform: translate(-50%, -50%) scale(1);
+      .box__image--branch {
+        height: 200px;
+      }
+      .box__text {
+        color: $text-color__002;
+        transform: translate(-100%, -50%) scale(1);
+      }
+      .text__name {
+        opacity: 1;
+        transition: all .5s ease-in-out;
+      }
+      .text__position {
+        opacity: 1;
+        transition: all .5s ease-in-out;
       }
     }
   }
 }
+
+.text {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  &__name {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $text-color__003;
+    opacity: 0;
+  }
+  &__position {
+    font-size: 10px;
+    color: $text-color__009;
+    opacity: 0;
+  }
+}
+
 
 .mainteam {
   background-image: url(../img/background--014.svg);
@@ -78,7 +109,7 @@
 }
 
 .contact-center {
-  background-image: url(../img/background--017.svg);
+  background-image: url(../img/background--021.svg);
 }
 
 .oc {
