@@ -1994,6 +1994,74 @@ body {
   background-image: url(../img/img--commission-products-001.svg);
 }
 
+.links-blok {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.links-blok a {
+  position: relative;
+  padding: 0 0 0 25px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: "Muli", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.links-blok a::after {
+  content: '';
+  position: absolute;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/btn-arrow.svg);
+  background-size: contain;
+  opacity: 0.8;
+}
+
+.links-blok .links-poster-yes {
+  background-color: #f70263;
+}
+
+.links-blok .pos-standart {
+  background-color: #5f666c;
+}
+
+.links-blok .poster-deposit {
+  background-color: #a962cf;
+}
+
+.links-blok .poster-mb {
+  background-color: #d73e8d;
+}
+
+.links-blok .flyer-mb {
+  background-color: #8f77e6;
+}
+
+.links-blok .memo-financial-assistant {
+  background-color: #75b2d8;
+}
+
+.links-blok .flyer-biometric {
+  background-color: #ed6399;
+}
+
+.links-blok .rim-pos {
+  background-color: #c9195f;
+}
+
+.links-blok .flyer-care {
+  background-color: #9c8a6d;
+}
+
+.links-blok .hanger {
+  background-color: #76a2c4;
+}
+
 .accordeon-boxes {
   margin-top: 30px;
   display: flex;
