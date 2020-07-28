@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Библиотека</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  @@include('_main-menu.html') 
+
+  <div class="wrapper wrapper--metrics">
+    @@include('_library-nav.html') 
+    <div class="wrapper__content">
+      @@include('_e-course.html')
+      @@include('_marketing-materials.html')
+    </div>
+  </div>
+  
+  @@include('_footer.html')
+  @@include('_popup.html')
+  <script src="js/script.min.js"></script>
+</body>  

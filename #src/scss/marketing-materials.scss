@@ -53,3 +53,21 @@
     background-color: #76a2c4;
   }
 }
+
+.marketing-links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  picture {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 65%;
+    }
+  }
+}
+
+.button-block-materials {
+  margin-top: 60px;
+}

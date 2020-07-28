@@ -1245,7 +1245,7 @@ body {
 }
 
 .client-centric-model__img img {
-  width: 100%;
+  width: 85%;
 }
 
 .targets__row {
@@ -2060,6 +2060,26 @@ body {
 
 .links-blok .hanger {
   background-color: #76a2c4;
+}
+
+.marketing-links {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marketing-links picture {
+  width: 100%;
+  text-align: center;
+}
+
+.marketing-links picture img {
+  width: 65%;
+}
+
+.button-block-materials {
+  margin-top: 60px;
 }
 
 .accordeon-boxes {
