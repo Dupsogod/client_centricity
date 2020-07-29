@@ -379,7 +379,7 @@ body {
 .wrapper--metrics {
   display: flex;
   padding: 55px 0 0 0;
-  min-height: 100%;
+  min-height: 70%;
   height: 91.5vh;
   overflow: hidden;
 }
@@ -446,7 +446,7 @@ body {
   padding: 0;
 }
 
-.header {
+.header-cc {
   position: fixed;
   width: 100%;
   margin-bottom: 15px;
@@ -454,11 +454,11 @@ body {
   z-index: 3;
 }
 
-.header * {
+.header-cc * {
   box-sizing: border-box;
 }
 
-.header a {
+.header-cc a {
   text-decoration: none;
 }
 
@@ -2288,7 +2288,7 @@ body {
   cursor: pointer;
 }
 
-.footer {
+.footer-cc {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -2296,21 +2296,21 @@ body {
   background-color: #FFFFFF;
 }
 
-.footer--headline {
+.footer-cc--headline {
   display: none;
   background-color: transparent;
   padding: 30px;
 }
 
-.footer--headline .footer-list__elem {
+.footer-cc--headline .footer-list__elem {
   color: #FFFFFF;
 }
 
-.footer--bottom {
+.footer-cc--bottom {
   padding: 20px 50px;
 }
 
-.footer a {
+.footer-cc a {
   text-decoration: none;
 }
 
@@ -2773,7 +2773,7 @@ body {
     padding: 0 20px;
   }
 
-  .header {
+  .header-cc {
     position: fixed;
     left: 0;
     padding-top: 20px;
@@ -2784,7 +2784,7 @@ body {
     z-index: 3;
   }
 
-  .header::before {
+  .header-cc::before {
     content: '';
     position: absolute;
     top: 0;
@@ -2795,17 +2795,17 @@ body {
     transition: .2s ease-in-out all;
   }
 
-  .header.active {
+  .header-cc.active {
     display: block;
     width: 100%;
     height: 100vh;
   }
 
-  .header.active::before {
+  .header-cc.active::before {
     height: 100vh;
   }
 
-  .header.active .main-menu {
+  .header-cc.active .main-menu {
     left: 0;
   }
 
@@ -2896,11 +2896,11 @@ body {
     margin-bottom: 20px;
   }
 
-  .footer--headline {
+  .footer-cc--headline {
     display: flex;
   }
 
-  .footer--bottom {
+  .footer-cc--bottom {
     display: none;
   }
 
