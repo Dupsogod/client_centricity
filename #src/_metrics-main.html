@@ -21,6 +21,13 @@
       <div class="metrics-diagramm metrics-diagramm--nps">
         <div class="metrics-diagramm__title">
           <img src="img/img--nps.svg" alt="NPS">
+          <div class="metrics-diagramm__text">
+            Клиентам предлагается оценить вероятность рекомендации компании друзьям и знакомым по 10-ти балльной шкале, где 0 – «точно не порекомендую», 10 – «точно порекомендую»
+            Оценки «0-6» - критики, оценки «9-10» - сторонники. 
+            <div class="formula">
+              NPS = (Сторонники – критики)/все клиенты
+            </div>  
+          </div>
         </div>
         <img src="img/delete--nps.jpg" alt="NPS">
       </div>
@@ -51,7 +58,13 @@
       <div class="metrics-diagramm metrics-diagramm--csi">
         <div class="metrics-diagramm__title">
           <img src="img/img--csi.svg" alt="CSI">
-          <div class="metrics-diagramm-title">
+          <div class="metrics-diagramm__text">
+            Клиентам предлагается оценить взаимодействие с компанией, ответив на вопрос «Насколько вам понравилась работа компании/консультация сотрудника» по 5-ти балльной шкале, где 1 – «совсем не понравилось», 5 – «очень понравилось»
+            <div class="formula">
+              CSAT = (%% оценок 4 и 5 от всех ответивших)
+            </div>  
+          </div>
+          <!-- <div class="metrics-diagramm-title">
             <p>
               Оценивается уровень соответствия ожиданиям клиентов. Все параметры продукта/канала делятся по важности и удовлетворенности
             </p>
@@ -67,7 +80,7 @@
                 Получается числовой показатель, отражающий общее мнение, с учетом значимости каждого из параметров
               </li>
             </ol>
-          </div>
+          </div> -->
         </div>
         <img src="img/delete--csi.jpg" alt="CSI">
       </div>
@@ -87,130 +100,31 @@
       <div class="metrics-diagramm metrics-diagramm--csat">
         <div class="metrics-diagramm__title">
           <img src="img/img--csat.svg" alt="CSAT">
-          <div class="metrics-diagramm-title">
+          <div class="metrics-diagramm__text">
+            Клиентам предлагается оценить конкретные параметры взаимодействия с компанией. CSI является сочетанием метрик CSAT и важности критериев.
+            <div class="formula">
+              CSI = CSAT по критерию 1* важность критерия+ CSAT по критерию 2*важность критерия 2+…+ CSAT по критерию (n)*важность критерия (n)
+            </div>
+            Например, клиентам, звонившим в контактный центр, для оценки предлагаются следующие параметры:
+            <ul>
+              <li>
+                полнота и понятность консультации
+              </li>
+              <li>
+                вежливость оператора
+              </li>
+              <li>
+                заинтересованность сотрудника в решении вопроса
+              </li>
+            </ul> 
+          </div>
+          <!-- <div class="metrics-diagramm-title">
             CSAT можно использовать сразу после контакта клиента с  компанией — после покупки товара, посещения сайта, общения с контактным центром.<br>
             Чтобы вычислить CSAT, клиентов спрашивают, насколько они удовлетворены продуктом или услугой. А для ответа предлагают шкалу от 1 до 5 баллов, где 1 — совершенно неудовлетворен, а 5 — полностью удовлетворен. Довольными считаются потребители, ответившие: 4 или 5 баллов. Далее полученные результаты рассчитывают по формуле: (количество довольных клиентов / количество опросов) х 100 = % удовлетворенных клиентов.
-          </div>
+          </div> -->
         </div>
         <img src="img/delete--csat.jpg" alt="CSAT">
       </div>
     </div>
   </div>
-  <!-- <h1 class="header-content header-content--metrics">
-    Метрики в целом
-    <span class="header-content__date">
-      23.07.2020
-    </span>
-  </h1> -->
-  <!-- <div class="metrics-content">
-    <div class="metrics-content__elem">
-      <header class="metrics-header">
-        <div class="metrics-header__number">
-          7
-        </div>
-        <div class="metrics-header__title">
-          Contact rate 
-        </div>
-        <div class="metrics-header__subtitle">
-          такое количество клиентов ежемесячно звонит в контактный центр банка и получает информацию от сотрудника. считается в %% от активной клиентской базы. ежемесячно
-        </div>
-      </header>
-      <div class="metrics-diagramm">
-        <img src="img/delete--contact-rate.jpg" alt="Contact Rate">
-      </div>
-    </div>
-    <div class="metrics-content__elem">
-      <header class="metrics-header">
-        <div class="metrics-header__number">
-          4
-        </div>
-        <div class="metrics-header__title">
-          Visit rate  
-        </div>
-        <div class="metrics-header__subtitle">
-          такое количество клиентов ежемесячно приходят в отделения банка для решения сервисных вопросов. считается в %% от активной клиентской базы. ежемесячно.
-        </div>
-      </header>
-      <div class="metrics-diagramm">
-        <img src="img/delete--visit-rate.jpg" alt="Visit Rate">
-      </div>
-    </div>
-    <div class="metrics-content__elem">
-      <header class="metrics-header">
-        <div class="metrics-header__number">
-          54
-        </div>
-        <div class="metrics-header__title">
-          Digital rate  
-        </div>
-        <div class="metrics-header__subtitle">
-          такое количество клиентов ежемесячно заходят в МБ и ИБ для просмотра любой информации или совершения каких-либо действий. считается в %% от активной клиентской базы. ежемесячно. 
-        </div>
-      </header>
-      <div class="metrics-diagramm">
-        <img src="img/delete--digital-rate.jpg" alt="Digital Rate">
-      </div>
-    </div>
-    <div class="metrics-content__elem">
-      <header class="metrics-header">
-        <div class="metrics-header__number">
-          0,45
-        </div>
-        <div class="metrics-header__title">
-          Complaints Rate 
-        </div>
-        <div class="metrics-header__subtitle">
-          такое количество клиентов ежемесячно обращается в банк с претензией через любой доступный канал обслуживания. считается в %% от активной клиентской базы. ежемесячно. 
-        </div>
-      </header>
-      <div class="metrics-diagramm">
-        <img src="img/delete--complaints-rate.jpg" alt="Complaints Rate">
-      </div>
-    </div>
-    <div class="metrics-content__elem">
-      <header class="metrics-header">
-        <div class="metrics-header__number">
-          13
-        </div>
-        <div class="metrics-header__title">
-          Средний срок доставки карты курьером до клиента
-        </div>
-      </header>
-      <div class="metrics-diagramm">
-
-      </div>
-    </div>
-    <div class="metrics-content__elem">
-      <header class="metrics-header">
-        <div class="metrics-header__number">
-          15
-        </div>
-        <div class="metrics-header__title">
-          Среднее время обслуживания в офисе 
-        </div>
-        <div class="metrics-header__subtitle">
-          (ожидание + консультация)
-        </div>
-      </header>
-      <div class="metrics-diagramm">
-
-      </div>
-    </div>
-    <div class="metrics-content__elem">
-      <header class="metrics-header">
-        <div class="metrics-header__number">
-          19
-        </div>
-        <div class="metrics-header__title">
-          Среднее время обслуживания в КЦ
-        </div>
-        <div class="metrics-header__subtitle">
-          (ожидание + консультация)
-        </div>
-      </header>
-      <div class="metrics-diagramm">
-
-      </div>
-    </div>
-  </div> -->
 </section>

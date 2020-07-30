@@ -40,6 +40,7 @@ $background-color__006: rgba(0, 0, 0, 0.6);
 $background-color__007: #D41367;
 $background-color__008: rgb(34, 35, 47);
 $background-color__009: #cccccc;
+$background-color__010: rgba(0, 0, 0, 0.1);
 
 body {
   margin: 0;
@@ -69,7 +70,7 @@ body {
   &--metrics {
     display: flex;
     padding: 55px 0 0 0;
-    min-height: 70%;
+    min-height: 100%;
     height: 91.5vh;
     overflow: hidden;
   }
@@ -99,7 +100,14 @@ body {
   &__row {
     padding: 30px 0 0 0;
     display: flex;
-  } 
+  }
+  &--metrics {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    min-height: 70%;
+    overflow: auto;
+  }  
 }
 
 .header-content {
@@ -209,6 +217,7 @@ body {
 
 @import "customer-nav";
 @import "metrics-headline";
+@import "сustomer-profile";
 @import "metrics-main";
 @import "already-make";
 @import "profile-client";
