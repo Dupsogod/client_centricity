@@ -420,6 +420,12 @@ body {
   overflow: auto;
 }
 
+.content-block--protest {
+  background-image: url(../img/image--broker.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -772,8 +778,8 @@ body {
 .about-cc {
   padding: 40px 100px 0 70px;
   flex-grow: 1;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 28px;
   color: #323E48;
 }
 
@@ -1590,6 +1596,7 @@ body {
 }
 
 .notice__elem img {
+  max-width: 25px;
   margin-right: 25px;
 }
 
@@ -2016,7 +2023,7 @@ body {
 }
 
 .metrics-diagramm--csat.active {
-  height: 900px;
+  height: 1070px;
 }
 
 .metrics-diagramm__text {
@@ -2635,6 +2642,25 @@ body {
   color: #323E48;
 }
 
+.header-protest {
+  font-size: 18px;
+  font-weight: 500;
+  color: #777777;
+}
+
+.protest-contect {
+  margin-top: 0;
+  width: 60%;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -.5px;
+  color: #323E48;
+}
+
+ul.protest-list {
+  margin-bottom: 15px;
+}
+
 .footer-cc {
   position: relative;
   display: flex;
@@ -2905,7 +2931,7 @@ body {
 
 @media (max-width: 1440px) {
   .about-cc {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .join-btn {
@@ -2945,7 +2971,7 @@ body {
 
 @media (max-width: 1366px) {
   .about-cc {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 25px;
   }
 

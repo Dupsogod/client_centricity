@@ -108,7 +108,12 @@ body {
     padding: 30px 40px;
     min-height: 70%;
     overflow: auto;
-  }  
+  }
+  &--protest {
+    background-image: url(../img/image--broker.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+  }
 }
 
 .header-content {
@@ -210,6 +215,7 @@ body {
       }
     }
     img {
+      max-width: 25px;
       margin-right: 25px;
     }
   }
@@ -227,6 +233,7 @@ body {
 @import "e-course.scss";
 @import "marketing-materials.scss";
 @import "adherents.scss";
+@import "protest.scss";
 
 @import "footer";
 @import "popup";
