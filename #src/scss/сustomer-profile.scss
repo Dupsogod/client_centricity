@@ -136,6 +136,7 @@
 .profile-list-elem {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid $text-color__016;
 }
 
 .profile-list-woman {
@@ -158,6 +159,17 @@
   height: 70px;
 }
 
+.profile-list-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  min-height: 70px;
+  font-size: 20px;
+  font-weight: 500;
+  color: $text-color__007;
+}
+
 .profile-list-progress {
   width: 100%;
   color: $text-color__002;
@@ -178,8 +190,19 @@
 }
 
 .profile-list-text {
+  width: 30%;
   padding: 10px 15px;
   text-align: center;
   font-size: 14px;
   color: #777;
+}
+
+.profile-list-description {
+  display: flex;
+  flex-direction: column;
+  color: $text-color__003;
+  font-size: 15px;
+  span {
+    font-weight: 900;
+  }
 }
